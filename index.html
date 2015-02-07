@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Core Application Security Concepts</title>
+
+		<meta name="description" content="What Application Security is about. Issues interesting for software craftsmanship.">
+		<meta name="author" content="Marek Puchalski">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/own.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+<!-- 01 -->
+			<div class="slides">
+				<section>
+					<h2>Core Application Security Concepts</h2>
+					<p>
+						<small><a href="mailto:marek.puchalski@capgemini.com">marek.puchalski@capgemini.com</a></small>
+					</p>
+					<p>
+						<small>Wrocław, ????-??-??</small>
+					</p>
+				</section>
+<!-- 02 -->
+				<section>
+					<h2>Who am I?</h2>
+					<p>
+						<img src="img/me.png"/>
+					</p>
+					<p class="mid"><small>business architect @ Capgemini, 8 years automotive, security maniac</small></p>
+				</section>
+
+				<section>
+<!-- 03 -->
+        <section>
+						<h2>TOC</h2>
+						<p class="fragment grow highlight-blue">Application Security (AppSec)</p>
+						<p>Security design concepts</p>
+						<p>Security Development Lifecycle (SDLC)</p>
+						<p>AppSec@NSC</p>
+				</section>
+<!-- 04 -->
+				<section>
+						<h2>What is AppSec?</h2>
+						<p>AppSec encompasses measures taken throughout the code's life-cycle to prevent gaps in 
+						   the <b>security policy</b> of an application through flaws in the <b>design, development, 
+						   deployment, upgrade, or maintenance</b> of the application.</p>
+						<p><small><a href="http://en.wikipedia.org/wiki/Application_security">Wikipedia</a></small></p>
+				</section>
+<!-- 05 -->
+        <section>
+						<h2>McCumber cube</h2>
+						<img src="img/Mccumber.png"/>
+						<p><small><a href="http://en.wikipedia.org/wiki/McCumber_cube">Wikipedia</a></small></p>
+					  <aside class="notes">
+							  In 1991, John McCumber created a model framework for establishing and evaluating information 
+							  security (information assurance) programs
+					  </aside>
+				</section>
+<!-- 06 -->
+				<section>
+						<h2>CIA triad is not enough</h2>
+						<p><b>Traceability</b> is needed for troubleshooting and forensics evidence.</p>
+						<br/>
+						<p>Bare minimum of audit fields:</p>
+						<p><b>Who</b> (subject) did <b>what</b> (operation) <b>where</b> (state of object) and 
+						  <b>when</b> (timestamp).</p>
+						<aside class="notes">
+							  Problem - there is no clear standard how/what/when/where to log.
+							  Confidentiality, Integrity, Availability
+					  </aside>
+				</section>
+<!-- 07 -->
+				<section>
+						<h2>AppSec summary so far</h2>
+						<p>You can't have a working system without CIA.</p>
+						<p>But it still does not mean were doing a good job in assuring systems security, because...</p>
+				</section>
+				
+				<section data-background="img/iceberg.jpg">
+	
+				    <h2 style="color:#ffffff">Big part of security is<div style="opacity:0.2">invisible</div></h2>
+						
+				</section>
+				</section>
+
+				<section>
+<!-- 08 -->
+        <section>
+						<h2>TOC</h2>
+						<p>Application Security (AppSec)</p>
+						<p class="fragment grow highlight-blue">Security design concepts</p>
+						<p>Security Development Lifecycle (SDLC)</p>
+						<p>AppSec@NSC</p>
+				</section>
+<!-- 09 -->
+				<section data-background="img/kompas.jpg">
+					
+					  <h2 style="color:#000000">What are design concepts?</h2>
+					
+				</section>
+
+				
+				</section>
+
+				<section id="fragments">
+					<h1>Questions?</h1>
+					<br/><br/>
+				
+				  <p class="fragment"><small>This presentation: 
+				    <a href="https://github.com/marpuch/Core-AppSec-Presentation">
+				      https://github.com/marpuch/Core-AppSec-Presentation</a></small><br/>
+				  <img src="img/cg.png"/></p>
+					
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
