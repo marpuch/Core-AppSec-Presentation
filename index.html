@@ -111,10 +111,17 @@
 				    <h2 style="color:#ffffff">Big part of security is<div style="opacity:0.2">invisible</div></h2>
 						
 				</section>
+<!-- 08 -->
+				<section data-background="img/busy.jpg">
+	
+				    <h2 style="color:#ffffff">and we are very busy people already...</h2>
+				    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+						
+				</section>
 				</section>
 
 				<section>
-<!-- 08 -->
+<!-- 09 -->
         <section>
 						<h2>TOC</h2>
 						<p>Application Security (AppSec)</p>
@@ -122,15 +129,15 @@
 						<p>Security Development Lifecycle (SDLC)</p>
 						<p>AppSec@NSC</p>
 				</section>
-<!-- 09 -->
+<!-- 10 -->
 				<section data-background="img/kompas.jpg">
 
 					  <h2 style="color:#000000">What are design concepts?</h2>
 					
 				</section>
-
+<!-- 11 -->
         <section>
-						<h2>Familiar design concepts</h2>
+						<h2>Already familiar design concepts</h2>
 						<ul>
 						  <li>DRY, DIE</li>
 						  <li>KISS</li>
@@ -155,7 +162,50 @@
 					  </aside>
 						
 				</section>
-				
+<!-- 12 -->
+        <section>
+						<h2>Security design concepts</h2>
+						<ol>
+						  <li>Least Privilege</li>
+						  <li>Separation of Duties</li>
+						  <li>Defense in Depth</li>
+						  <li>Fail Secure</li>
+						  <li>Economy of Mechanisms</li>
+						  <li>Complete Mediation</li>
+						  <li>Open Design</li>
+						  <li>Least Common Mechanisms</li>
+						  <li>Psychological Acceptability</li>
+						  <li>Weakest Link</li>
+						  <li>Leveraging Existing Components</li>
+						</ol>
+						
+				</section>
+				</section>
+
+				<section>
+<!-- 13 -->
+        <section>
+						<h2>Least Privilage</h2>
+						<p>Giving a preson or process a minimal level of access rights 
+						   for a minimal amount of time.</p>
+						<img src="img/authorized-personnel-only.jpg"/>
+				</section>
+<!-- 14 -->
+        <section>
+						<h2>Reasons</h2>
+						<p>Containment of potential damage</p>
+						<pre><code data-trim contenteditable>
+Runtime runtime = Runtime.getRuntime();
+Process proc = runtime.exec("find . -name " + param);
+					  </code></pre>
+					  <p>also Spring CVE-2010-1622, Struts 2 CVE-2012-0838 (Remote Code Execution).</p>
+					  <p>Last but not least - user errors.</p>
+				</section>
+<!-- 15 -->
+        <section>
+						<h2>Fine example from our project</h2>
+						<img src="img/architektura_db.png"/>
+				</section>
 				</section>
 
 				<section id="fragments">
