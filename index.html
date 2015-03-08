@@ -178,7 +178,7 @@
 						  <li>Weakest Link</li>
 						  <li>Leveraging Existing Components</li>
 						</ol>
-						
+
 				</section>
 				</section>
 
@@ -194,21 +194,67 @@
         <section>
 						<h2>Reasons</h2>
 						<p>Containment of potential damage</p>
-						<pre><code data-trim contenteditable>
+						<br/>
+						<div  class="fragment"><small>Reason 1:</small>
+  						<pre><code data-trim contenteditable>
 Runtime runtime = Runtime.getRuntime();
 Process proc = runtime.exec("find . -name " + param);
-					  </code></pre>
-					  <p>also Spring CVE-2010-1622, Struts 2 CVE-2012-0838 (Remote Code Execution).</p>
-					  <p>Last but not least - user errors.</p>
+  					  </code></pre>
+					  </div>
+					  <div  class="fragment"><small>Reason 2:</small>
+					    <p>Spring CVE-2010-1622, Struts 2 CVE-2012-0838, ... (Remote Code Execution).</p>
+					  </div>
+					  <div  class="fragment"><small>Reason 3:</small>
+					    <p>User errors.</p>
+					  </div>
 				</section>
 <!-- 15 -->
         <section>
-						<h2>Fine example from our project</h2>
+						<h4>Least privilege in DB design</h4>
 						<img src="img/architektura_db.png"/>
 				</section>
 				</section>
 
-				<section id="fragments">
+<!-- 16 -->
+        <section>
+						<h2>Fail Secure</h2>
+						<p>Maintain confidentiality, integrity and availability upon system failure by defaulting to a secure state.</p>
+						<img src="img/fail-secure.jpg"/>
+				</section>
+				
+        <section>
+<!-- 17 -->
+        <section>
+						<h2>Defense in Depth</h2>
+						<p>(Layered Defense)</p>
+						<p>Redundancy of protection mechanisms. No single point of complete compromise.</p>
+						<img src="img/defense-in-depth.jpg"/>
+				</section>
+<!-- 18 -->
+        <section>
+						<h2>Examples</h2>
+						<h3>Cross-Site Scripting (XSS)</h3>
+						<p><b>Layer 1</b>: Proper, context sensitive escaping offers 100% XSS protection.</p>
+						<p class="fragment"><b>Layer 2</b>: Content Security Policy (CSP). See <a href="http://builders.capgemini.com/readcommunicationonline?content_id=F7F93265-0647-81DD-E509-42A13BDFDD4C">SSL-08-2014</a></p>
+				</section>
+<!-- 19 -->
+        <section>
+						<h2>Examples</h2>
+						<h3>Password Protection</h3>
+						<p><b>Layer 1</b>: Passwords are stored in the database. Never revealed.</p>
+						<p class="fragment"><b>Layer 2</b>: Passwords are hashed. See <a href="http://builders.capgemini.com/readcommunicationonline?content_id=D1592DC1-B729-A124-5A37-8B81ABD9531F">SSL-07-2014</a></p>
+				</section>
+<!-- 20 -->
+        <section>
+						<h2>Examples</h2>
+						<h3>Data Confidentiality</h3>
+						<p><b>Layer 1</b>: Strong TLS configuration.</p>
+						<p class="fragment"><b>Layer 2</b>: HTTP Strict Transport Security (HSTS). See <a href="http://builders.capgemini.com/readcommunicationonline?content_id=7791DD29-C9AF-2E4F-5D92-72AAD518ABD8">SSL-09-2014</a></p>
+				</section>
+				
+				</section>
+
+				<section>
 					<h1>Questions?</h1>
 					<br/><br/>
 				
@@ -218,7 +264,7 @@ Process proc = runtime.exec("find . -name " + param);
 				  <img src="img/cg.png"/></p>
 					
 				</section>
-
+				
 			</div>
 
 		</div>
